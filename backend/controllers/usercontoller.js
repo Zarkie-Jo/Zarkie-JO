@@ -2,7 +2,6 @@
 const User = require("../models/User");
 const path = require("path");
 const fs = require("fs");
-const Payment = require("../models/Payment"); // Make sure this path is correct
 
 exports.getProfile = async (req, res) => {
   try {

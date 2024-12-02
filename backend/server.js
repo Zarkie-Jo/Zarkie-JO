@@ -456,19 +456,7 @@ const authRoutes = require("./routes/authRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 const userRoutes = require("./routes/userRoutes");
-const shopOwnerRoutes = require("./routes/shopOwnerRoutes");
-const productRoutes = require("./routes/productRoutes");
-const homeproductRoutes = require("./routes/homeproductRoutes");
-const catalogRoutes = require("./routes/catalogRoutes");
-const cartRoutes = require("./routes/cartRoutes");
-const commentRoutes = require("./routes/commentRoutes");
-const notificationRoutes = require("./routes/notificationRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
-const reportRoutes = require("./routes/reportRoutes");
 const authMiddleware = require("./middlewares/auth");
-const carCenterRoutes = require("./routes/CarCenterRoutes");
-const shopProfileRoutes = require("./routes/shopProfileRoutes");
-const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
@@ -492,18 +480,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/shop-owner", shopOwnerRoutes);
-app.use("/api/products", productRoutes);
-app.use("/api/homeproduct", homeproductRoutes);
-app.use("/api/catalog", catalogRoutes);
-app.use("/api/cart", cartRoutes);
-app.use("/api/Comment", commentRoutes);
-app.use("/api/notification", notificationRoutes);
-app.use("/api/report", authMiddleware, reportRoutes);
-app.use("/api/carcenters", carCenterRoutes);
-app.use("/api/shop-owners", shopProfileRoutes);
-app.use("/api/payments", paymentRoutes);
-app.use("/api/orders", orderRoutes);
 
 // MongoDB connection
 mongoose
